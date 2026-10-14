@@ -1,0 +1,414 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* ==========================================================================
+   Base Newsletter Styling - Responsive, Modern, Accessible
+   Sử dụng CSS Custom Properties để hỗ trợ phối màu linh hoạt qua Adobe Color
+   ========================================================================== */
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-page, #f4f5f7);
+  color: var(--text-main, #091e42);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Container bọc Newsletter chuẩn kích thước Email (max 680px) */
+.newsletter-wrapper {
+  max-width: 680px;
+  margin: 30px auto;
+  background-color: var(--bg-card, #ffffff);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow, 0 10px 25px rgba(0, 0, 0, 0.07));
+  border: 1px solid var(--border-color, #dfe1e6);
+}
+
+/* Khối thanh điều hướng so sánh (Demo Bar) */
+.comparison-bar {
+  background: #111827;
+  color: #f3f4f6;
+  padding: 12px 20px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.comparison-bar a {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.comparison-bar .btn-theme-1 {
+  background: #0065ff;
+  color: #ffffff;
+}
+.comparison-bar .btn-theme-1:hover {
+  background: #0747a6;
+}
+.comparison-bar .btn-theme-2 {
+  background: #c85a32;
+  color: #ffffff;
+}
+.comparison-bar .btn-theme-2:hover {
+  background: #9e3f1d;
+}
+.comparison-bar .color-pill {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 4px;
+  vertical-align: middle;
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Header Newsletter */
+.newsletter-header {
+  padding: 24px 32px 18px;
+  background-color: var(--bg-card, #ffffff);
+  border-bottom: 1px solid var(--border-color, #dfe1e6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--primary-color, #0065ff);
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: -0.5px;
+}
+.brand-logo svg {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+}
+.header-meta {
+  font-size: 13px;
+  color: var(--text-muted, #5e6c84);
+  font-weight: 500;
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 40px 32px;
+  background: linear-gradient(135deg, var(--bg-subtle, #deebff) 0%, var(--bg-card, #ffffff) 100%);
+  border-bottom: 1px solid var(--border-color, #dfe1e6);
+}
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--badge-bg, #e6fcff);
+  color: var(--badge-text, #008da6);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+.hero-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text-main, #091e42);
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+.hero-subtitle {
+  font-size: 16px;
+  color: var(--text-muted, #5e6c84);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* Nút bấm CTA Tùy chỉnh */
+.btn-primary-custom {
+  background-color: var(--primary-color, #0065ff);
+  color: #ffffff !important;
+  font-weight: 600;
+  padding: 12px 26px;
+  border-radius: 8px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+.btn-primary-custom:hover {
+  background-color: var(--primary-hover, #0747a6);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+  color: #ffffff;
+}
+
+.btn-accent-custom {
+  background-color: var(--accent-color, #ff5630);
+  color: #ffffff !important;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.btn-accent-custom:hover {
+  background-color: var(--accent-hover, #de350b);
+  transform: translateY(-1px);
+  color: #ffffff;
+}
+
+/* Feature Cards Grid */
+.features-container {
+  padding: 36px 32px 16px;
+}
+.section-heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-main, #091e42);
+  margin-bottom: 6px;
+}
+.section-desc {
+  font-size: 14px;
+  color: var(--text-muted, #5e6c84);
+  margin-bottom: 24px;
+}
+.newsletter-card {
+  background-color: var(--bg-card, #ffffff);
+  border: 1px solid var(--border-color, #dfe1e6);
+  border-radius: 12px;
+  padding: 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.newsletter-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-color: var(--primary-color, #0065ff);
+}
+.card-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background-color: var(--bg-subtle, #deebff);
+  color: var(--primary-color, #0065ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.card-icon-box.accent-box {
+  background-color: rgba(255, 86, 48, 0.12);
+  color: var(--accent-color, #ff5630);
+}
+.card-icon-box.secondary-box {
+  background-color: rgba(0, 194, 224, 0.15);
+  color: var(--secondary-color, #00c2e0);
+}
+.card-title-custom {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-main, #091e42);
+  margin-bottom: 10px;
+}
+.card-text-custom {
+  font-size: 14px;
+  color: var(--text-muted, #5e6c84);
+  line-height: 1.55;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+.card-link {
+  color: var(--primary-color, #0065ff);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.card-link:hover {
+  text-decoration: underline;
+}
+
+/* Quote Spotlight Section */
+.spotlight-box {
+  margin: 0 32px 32px;
+  padding: 24px 28px;
+  border-radius: 12px;
+  background-color: var(--bg-subtle, #deebff);
+  border-left: 4px solid var(--primary-color, #0065ff);
+}
+.spotlight-quote {
+  font-size: 15px;
+  font-style: italic;
+  color: var(--text-main, #091e42);
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.spotlight-author {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted, #5e6c84);
+}
+.spotlight-author strong {
+  color: var(--primary-color, #0065ff);
+}
+
+/* Highlight Banner Card */
+.banner-card {
+  margin: 0 32px 36px;
+  padding: 28px;
+  border-radius: 12px;
+  background-color: var(--secondary-color, #00c2e0);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.banner-card h4 {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.banner-card p {
+  font-size: 14px;
+  margin-bottom: 0;
+  opacity: 0.95;
+}
+
+/* Feedback / Poll Section */
+.feedback-box {
+  padding: 24px 32px;
+  border-top: 1px solid var(--border-color, #dfe1e6);
+  background-color: var(--bg-card, #ffffff);
+  text-align: center;
+}
+.feedback-box h5 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-main, #091e42);
+  margin-bottom: 12px;
+}
+.feedback-reactions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+.reaction-btn {
+  background: var(--bg-subtle, #deebff);
+  border: 1px solid var(--border-color, #dfe1e6);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--text-main, #091e42);
+  font-weight: 500;
+}
+.reaction-btn:hover {
+  background: var(--primary-color, #0065ff);
+  color: #ffffff;
+  border-color: var(--primary-color, #0065ff);
+}
+
+/* Footer Section */
+.newsletter-footer {
+  padding: 32px;
+  background-color: var(--footer-bg, #091e42);
+  color: var(--footer-text, #a5b2c6);
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: center;
+}
+.footer-logo {
+  font-weight: 800;
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 14px;
+  letter-spacing: -0.3px;
+}
+.footer-links {
+  margin-bottom: 16px;
+}
+.footer-links a {
+  color: var(--footer-text, #a5b2c6);
+  text-decoration: underline;
+  margin: 0 8px;
+  transition: color 0.2s ease;
+}
+.footer-links a:hover {
+  color: #ffffff;
+}
+.footer-social {
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.footer-social a {
+  color: var(--footer-text, #a5b2c6);
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+.footer-social a:hover {
+  color: var(--primary-color, #0065ff);
+  transform: translateY(-2px);
+}
+.footer-disclaimer {
+  max-width: 520px;
+  margin: 0 auto;
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .newsletter-wrapper {
+    margin: 10px auto;
+    border-radius: 0;
+  }
+  .hero-section, .features-container, .newsletter-header, .feedback-box, .newsletter-footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .spotlight-box, .banner-card {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .hero-title {
+    font-size: 24px;
+  }
+  .banner-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

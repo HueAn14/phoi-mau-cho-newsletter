@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* ==========================================================================
+   BỘ MÀU 2: WARM TERRACOTTA & SAGE (Creative Studio & Mindful Workspace)
+   Khám phá & lựa chọn từ Adobe Color theo quy tắc: Compound / Analogous + Accent
+   --------------------------------------------------------------------------
+   - Primary:        #C85A32 (Warm Terracotta - Ấm áp, tự nhiên, sáng tạo)
+   - Primary Hover:  #9E3F1D (Deep Auburn)
+   - Secondary:      #4E878C (Calm Sage Teal - Cân bằng, tĩnh tại)
+   - Accent:         #E29578 (Apricot Peach - Dịu ngọt, tinh tế)
+   - Accent Hover:   #C57053 (Warm Sienna)
+   - Text Main:      #2D2327 (Dark Espresso - Êm mắt, sang trọng)
+   - Text Muted:     #6B5E62 (Warm Charcoal)
+   - BG Page:        #FBF8F5 (Alabaster Warm Cream)
+   - BG Card:        #FFFFFF (Pure White)
+   - BG Subtle:      #F6EDE8 (Soft Clay Mist)
+   - Border Color:   #EBDDD6 (Soft Clay Border)
+   - Footer BG:      #2D2327 (Deep Charcoal Espresso)
+   - Footer Text:    #C3B6BA (Dusty Rose Gray)
+   ========================================================================== */
+
+:root {
+  --theme-name: "Warm Terracotta & Sage";
+  --primary-color: #C85A32;
+  --primary-hover: #9E3F1D;
+  --secondary-color: #4E878C;
+  --accent-color: #E29578;
+  --accent-hover: #C57053;
+  --text-main: #2D2327;
+  --text-muted: #6B5E62;
+  --bg-page: #FBF8F5;
+  --bg-card: #FFFFFF;
+  --bg-subtle: #F6EDE8;
+  --border-color: #EBDDD6;
+  --card-shadow: 0 10px 25px rgba(45, 35, 39, 0.07);
+  --badge-bg: #EAF2F2;
+  --badge-text: #2D5F64;
+  --footer-bg: #2D2327;
+  --footer-text: #C3B6BA;
+}

@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* ==========================================================================
+   BỘ MÀU 1: OCEANIC TECH PRODUCTIVITY (Trello Modern Tech)
+   Khám phá & lựa chọn từ Adobe Color theo quy tắc: Split-Complementary
+   --------------------------------------------------------------------------
+   - Primary:        #0065FF (Sapphire Blue - Tin cậy, chuyên nghiệp)
+   - Primary Hover:  #0747A6 (Deep Royal Blue)
+   - Secondary:      #00C2E0 (Electric Cyan - Năng động, tươi mới)
+   - Accent:         #FF5630 (Coral Sunset - Kêu gọi hành động, nổi bật)
+   - Accent Hover:   #DE350B (Crimson Flame)
+   - Text Main:      #091E42 (Deep Navy Charcoal - Tương phản AAA WCAG)
+   - Text Muted:     #5E6C84 (Slate Gray)
+   - BG Page:        #F4F5F7 (Cool Light Slate)
+   - BG Card:        #FFFFFF (Pure White)
+   - BG Subtle:      #DEEBFF (Soft Cyan-Blue Tint)
+   - Border Color:   #DFE1E6 (Clean Silver Border)
+   - Footer BG:      #091E42 (Dark Midnight Navy)
+   - Footer Text:    #A5B2C6 (Soft Ice Slate)
+   ========================================================================== */
+
+:root {
+  --theme-name: "Oceanic Tech Productivity";
+  --primary-color: #0065FF;
+  --primary-hover: #0747A6;
+  --secondary-color: #00C2E0;
+  --accent-color: #FF5630;
+  --accent-hover: #DE350B;
+  --text-main: #091E42;
+  --text-muted: #5E6C84;
+  --bg-page: #F4F5F7;
+  --bg-card: #FFFFFF;
+  --bg-subtle: #DEEBFF;
+  --border-color: #DFE1E6;
+  --card-shadow: 0 10px 25px rgba(9, 30, 66, 0.08);
+  --badge-bg: #E6FCFF;
+  --badge-text: #008DA6;
+  --footer-bg: #091E42;
+  --footer-text: #A5B2C6;
+}
